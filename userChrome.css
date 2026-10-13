@@ -1,0 +1,27 @@
+@-moz-document url(chrome://browser/content/browser.xhtml)
+{
+    /* ========================================
+     Container & Tabs
+     ======================================== */
+
+    .tabbrowser-tab[usercontextid] .tab-background {
+        border-radius: 50% !important;
+        outline: 1px solid var(--identity-tab-color) !important;
+        outline-offset: -2px !important;
+        aspect-ratio: 1 / 1 !important;
+        margin-inline: auto !important;
+    }
+
+    .tabbrowser-tab[usercontextid] .tab-context-line {
+        display: none !important;
+    }
+
+    .tabbrowser-tab[usercontextid][selected] .tab-background {
+        outline: 1px solid var(--identity-tab-color) !important;
+        box-shadow: 0 0 8px var(--identity-tab-color) !important;
+    }
+
+    .tabbrowser-tab:not([usercontextid])[selected] .tab-background {
+        box-shadow: 0 0 8px var(--tab-border-color-selected) !important;
+    }
+}
